@@ -1,6 +1,6 @@
 --@Autor(es): Bueno Hernández Héctor Daniel, Fernández Cano Iván Antonio
 --@Fecha creación: 08/05/2024
---@Descripción: Practica 09 - Ejercicio 1
+--@Descripción: Proyecto final
 
 Prompt Conectando como usuario sys
 connect sys/system as sysdba
