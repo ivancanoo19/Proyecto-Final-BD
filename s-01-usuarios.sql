@@ -10,7 +10,7 @@ declare
 cursor cur_usuarios is
     select username from dba_users where username like 'BF_PROY%';
   cursor cur_roles is
-    select role from dba_roles where role like 'BF_PROY%';
+    select role from dba_roles where role like 'ROL_PROY%';
     
 begin
   for r in cur_usuarios loop
@@ -27,10 +27,10 @@ Prompt Creando usuarios otorgando permisos
 create user bf_proy_invitado identified by invitado;
 create user bf_proy_admin identified by admin quota 1024m on users;
 
-create role rol__proy_invitado not identified;
+create role rol_proy_invitado not identified;
 grant create session to bf_proy_invitado;
 
-create role rol__proy_admin not identified;
+create role rol_proy_admin not identified;
 grant create session, create table, create sequence, create procedure, create synonym, create view to bf_proy_admin;
 
 Prompt Listo!
