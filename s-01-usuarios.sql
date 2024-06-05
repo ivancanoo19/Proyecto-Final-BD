@@ -28,10 +28,11 @@ create user bf_proy_invitado identified by invitado;
 create user bf_proy_admin identified by admin quota 1024m on users;
 
 create role rol_proy_invitado not identified;
-grant create session to bf_proy_invitado;
+grant create session, create synonym to bf_proy_invitado;
 
 create role rol_proy_admin not identified;
-grant create session, create table, create sequence, create procedure, create synonym, create view to bf_proy_admin;
+grant create session, create table, create sequence, create procedure, 
+  create synonym, create public synonym, create view to bf_proy_admin;
 
 Prompt Listo!
 disconnect
