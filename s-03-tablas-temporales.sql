@@ -2,7 +2,8 @@
 --@Fecha creación:  05/06/2024
 --@Descripción:     Proyecto final - Creación de objetos
 
-
+prompt conectando como usuario BF_PROY_ADMIN
+connect BF_PROY_ADMIN/admin
 --
 --  tabla vehiculo
 --
