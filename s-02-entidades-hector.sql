@@ -9,7 +9,7 @@ connect BF_PROY_ADMIN/admin
 --
 --  tabla propietario
 -- 
-
+Prompt Creando tabla propietario
 create table propietario(
   propietario_id number(10,0) not null,
   nombre varchar2(40) not null,
@@ -18,23 +18,92 @@ create table propietario(
   rfc varchar2(13) not null,
   curp varchar2(18) null,
   correo varchar2(200) not null,
-  puntos_neg_totales number(5,0) not null,
+  puntos_neg_totales number(5,0) default 0,
   --Constraints
   constraint propietario_fk primary key(propietario_id)
 );
 
 --
---  status vehiculo
+--  tabla status_vehiculo
 --
+Prompt Creando tabla status_vehiculo
 create table status_vehiculo(
   status_vehiculo_id number(10,0) not null,
   nombre varchar2(40) not null,
-  desc varchar2(40) not null
+  descripcion varchar2(40) not null,
+  --Constraints
+  constraint status_vehiculo_pk primary key(status_vehiculo_id)
 );
+
+--
+--  tabla marca
+--
+Prompt Creando tabla marca
+create table marca(
+  marca_id number(10,0) not null,
+  descripcion varchar2(200) not null,
+  --Constraints
+  constraint marca_pk primary key(marca_id)
+);
+
+--
+--  tabla modelo
+--
+Prompt Creando tabla modelo
+create table modelo(
+  modelo_id number(10,0) not null,
+  nombre varchar2(40) not null,
+  marca_id,
+  --Constraints
+  constraint modelo_pk primary key(modelo_id),
+  constraint modelo_marca_id_fk foreign key(marca_id)
+    references marca(marca_id)
+);
+
+--
+--  tabla vehiculo
+--  AGREGAR LAS FK DE MODELO Y PROPIETARIO --
+--
+Prompt Creando tabla vehiculo
+create table vehiculo(
+  vehiculo_id number(10,0) not null,
+  fecha_status date not null,
+  año number(4,0) not null,
+  num_serie varchar2(18) not null,
+  es_transporte_pub number(1,0) not null,
+  es_carga number(1,0) not null,
+  es_particular number(1,0) not null,
+  fecha_inicio date not null,
+  fecha_fin date null,
+  num_serie_dispositivo varchar2(18) not null,
+  fecha_registro_dispositivo date not null,
+  propietario_id,
+  status_vehiculo_id,
+  modelo_id,
+  --Constraints
+  constraint vehiculo_pk primary key(vehiculo_id),
+  constraint vehiculo_tipo_chk check(
+    (es_transporte_pub=1 and es_carga=0 and es_particular=0)
+    or
+    (es_transporte_pub=0 and es_carga=1 and es_particular=0)
+    or
+    (es_transporte_pub=0 and es_carga=0 and es_particular=1)
+    or
+    (es_transporte_pub=0 and es_carga=1 and es_particular=1)
+  ),
+  constraint vehiculo_propietario_id_fk foreign key(propietario_id)
+    references propietario(propietario_id),
+  constraint vehiculo_status_vehiculo_id_fk foreign key(status_vehiculo_id)
+    references status_vehiculo(status_vehiculo_id),
+  constraint vehiculo_modelo_id_fk foreign key(modelo_id)
+    references modelo(modelo_id)
+);
+
 
 --
 --  tabla hist_propietarios
 -- 
+Prompt Creando tabla hist_propietarios
 create table hist_propietarios(
   hist_propietarios_id number(10,0) not null,
   fecha_ini date not null,
@@ -51,41 +120,9 @@ create table hist_propietarios(
 );
 
 --
---  tabla vehiculo
---  AGREGAR LAS FK DE MODELO Y PROPIETARIO --
---
-
-create table vehiculo(
-  vehiculo_id number(10,0) not null,
-  fecha_status date not null,
-  año number(4,0) not null,
-  num_serie varchar2(18) not null,
-  es_transporte_pub number(1,0) not null,
-  es_carga number(1,0) not null,
-  es_particular number(1,0) not null,
-  fecha_inicio date not null,
-  fecha_fin date null,
-  num_serie_dispositivo varchar2(18) not null,
-  fecha_registro_dispositivo date not null,
-  propietario_id,
-  --Constraints
-  constraint vehiculo_pk primary key(vehiculo_id),
-  constraint vehiculo_tipo_chk check(
-    (es_transporte_pub=1 and es_carga=0 and es_particular=0)
-    or
-    (es_transporte_pub=0 and es_carga=1 and es_particular=0)
-    or
-    (es_transporte_pub=0 and es_carga=0 and es_particular=1)
-    or
-    (es_transporte_pub=0 and es_carga=1 and es_particular=1)
-  )
-  constraint vehiculo_propietario_id_fk foreign key(propietario_id)
-    references propietario(propietario_id)
-);
-
---
--- tabla hist_status_vehiculo
+--  tabla hist_status_vehiculo
 -- 
+Prompt Creando tabla status_vehiculo
 create table hist_status_vehiculo(
   hist_status_vehiculo_id number(10,0) not null,
   fecha_status date not null,
@@ -100,13 +137,115 @@ create table hist_status_vehiculo(
 );
 
 --
--- tabla entidad_pais
+--  tabla entidad_pais
 --
+Prompt Creando tabla entidad_pais
 create table entidad_pais(
   entidad_pais_id number(10,0) not null,
   clave varchar2(3) not null,
   nombre varchar2(40) not null,
-)
+  --Constraints
+  constraint entidad_pais_pk primary key(entidad_pais_id)
+);
 
 --
---  tabla
+--  tabla placa
+--
+Prompt Creando tabla placa
+create table placa(
+  placa_id number(10,0) not null,
+  num_placa varchar2(10) not null, 
+  fecha_aignacion date not null,
+  esta_activa number(1,0) not null,
+  vehiculo_id number(10,0) null,
+  entidad_pais_id,
+  --Constraints
+  constraint placa_pk primary key(placa_id),
+  constraint placa_vehiculo_id_fk foreign key(vehiculo_id)
+    references vehiculo(vehiculo_id),
+  constraint placa_entidad_pais_id_fk foreign key(entidad_pais_id)
+    references entidad_pais(entidad_pais_id),
+  constraint placa_vehiculo_id_uk unique(vehiculo_id)
+);
+
+--
+--  tabla tipo_licencia
+--
+Prompt Creando tabla tipo_licencia
+create table tipo_licencia(
+  tipo_licencia_id number(10,0) not null,
+  nombre char(1) not null,
+  descripcion varchar2(100) not null,
+  --CONSTRAINTS
+  constraint tipo_licencia_pk primary key(tipo_licencia_id)
+);
+
+--
+--  tabla transporte_pub
+--
+Prompt Creando tabla transporte_pub
+create table transporte_pub(
+  vehiculo_id,
+  pasajeros_sentados number(2,0) not null,
+  pasajeros_parados number(2,0) not null,
+  tipo_licencia_id,
+  --Constraints
+  constraint transporte_pub_pk primary key(vehiculo_id),
+  constraint transporte_pub_vehiculo_id_fk foreign key(vehiculo_id)
+    references vehiculo(vehiculo_id),
+  constraint transporte_pub_tipo_licencia_id_fk foreign key(tipo_licencia_id)
+    references tipo_licencia(tipo_licencia_id),
+  constraint tipo_licencia_id_chk check(
+    (tipo_licencia_id = 1 and pasajeros_sentados = 4 and pasajeros_parados = 0)
+    or
+    (tipo_licencia_id = 2 and pasajeros_sentados < 4 and pasajeros_sentados > 20 and pasajeros_parados = 0)
+    or
+    (tipo_licencia_id = 3 and pasajeros_sentados <= 20 and pasajeros_parados <= 1)
+  )
+);
+
+--
+--  tabla carga
+--
+Prompt Creando tabla carga
+create table carga(
+  vehiculo_id,
+  capacidad_ton number(5,2) not null,
+  capacidad_m3 number(6,2) null,
+  num_remolques number(2,0) null,
+  --Constraints
+  constraint carga_pk primary key(vehiculo_id),
+  constraint carga_vehiculo_id_fk foreign key(vehiculo_id)
+    references vehiculo(vehiculo_id)
+);
+
+--
+--  tabla tipo_transmision
+--
+Prompt Creando tabla tipo_transmision
+create table tipo_transmision(
+  tipo_transmision_id number(10,0) not null,
+  nombre varchar2(1) not null,
+  descripcion varchar2(10) not null,
+  --Constraints
+  constraint tipo_transmision_pk primary key(tipo_transmision_id)
+);
+
+--
+--  tabla particular
+-- 
+Prompt Creando tabla particular
+create table particular(
+  vehiculo_id,
+  num_bolsas_aire number(2,0) not null,
+  abs number(1,0) null,
+  tipo_transmision_id,
+  importe_seguro numeric(8,2) default 0,
+  impuesto generated always as (num_bolsas_aire * 1000 + abs * 2000 + tipo_transmision_id * 1500),
+  --Constraints
+  constraint particular_pk primary key (vehiculo_id),
+  constraint particular_vehiculo_id_fk foreign key(vehiculo_id)
+    references vehiculo(vehiculo_id),
+  constraint particular_tipo_transmision_id_fk foreign key(tipo_transmision_id)
+    references tipo_transmision(tipo_transmision_id)
+);
