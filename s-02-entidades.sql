@@ -155,7 +155,7 @@ Prompt Creando tabla placa
 create table placa(
   placa_id number(10,0) not null,
   num_placa varchar2(10) not null, 
-  fecha_aignacion date not null,
+  fecha_asignacion date not null,
   esta_activa number(1,0) not null,
   vehiculo_id number(10,0) null,
   entidad_pais_id,
