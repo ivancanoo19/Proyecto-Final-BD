@@ -30,7 +30,7 @@ Prompt Creando tabla status_vehiculo
 create table status_vehiculo(
   status_vehiculo_id number(10,0) not null,
   nombre varchar2(40) not null,
-  descripcion varchar2(40) not null,
+  descripcion varchar2(200) not null,
   --Constraints
   constraint status_vehiculo_pk primary key(status_vehiculo_id)
 );
