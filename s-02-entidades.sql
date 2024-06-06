@@ -226,7 +226,7 @@ Prompt Creando tabla tipo_transmision
 create table tipo_transmision(
   tipo_transmision_id number(10,0) not null,
   nombre varchar2(1) not null,
-  descripcion varchar2(10) not null,
+  descripcion varchar2(50) not null,
   --Constraints
   constraint tipo_transmision_pk primary key(tipo_transmision_id)
 );
