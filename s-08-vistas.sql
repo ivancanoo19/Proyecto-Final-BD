@@ -40,6 +40,14 @@ create or replace view v_num_infracciones(
 ) as
   select d.propietario_id, d.nombre, d.ap_paterno, d.ap_materno, d.rfc,
     count(*) as num_infracciones
-  from s_dueño d
+  from propietario d
   left join infraccion i on d.propietario_id=i.propietario_id
   group by d.propietario_id, d.nombre, d.ap_paterno, d.ap_materno, d.rfc;
+
+Prompt Creando vista que muestre los datos del propietario ocultando datos sensibles
+create or replace view v_propietario(
+  propietario_id, nombre, ap_paterno, ap_materno, correo, num_licencia
+) as
+  select p.propietario_id, p.nombre, p.ap_paterno, p.ap_materno, p.correo, l.num_licencia
+  from propietario p, licencia l
+  where p.propietario_id = l.propietario_id;
