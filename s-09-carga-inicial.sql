@@ -310,7 +310,7 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'BZC997', to_date('15-07-2023', 'dd-mm-yyyy'), 0, vehiculo_seq.currval, 10);
 
--- Insertar noveno vehículo y asignarle una placa
+-- 2do vehiculo
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, sysdate, 2023, '3HGCM82633A004375', 1, 0, 0, 
