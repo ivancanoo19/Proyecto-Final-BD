@@ -139,7 +139,7 @@ values (placa_seq.nextval, 'KKE187', sysdate, 1, null, 10);
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Hector', 'Bueno', 'Hernandez', 'BDH870123HPL', 'BUHH870123HDFNRD01', 'hector.bueno@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 12345678, empty_blob(), empty_blob(), empty_blob(), sysdate, to_date('06/06/2027','dd/mm/yyyy'), propietario_seq.currval, 1);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
@@ -158,7 +158,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales)
   values(propietario_seq.nextval, 'Lesliee', 'Cruz', 'Buenavista', 'CSL920215MTF', 'CRBL920215MDFNLL02', 'lesliee.cruz@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 87654321, empty_blob(), empty_blob(), empty_blob(), to_date('27/03/2022','dd/mm/yyyy'), to_date('27/03/2025','dd/mm/yyyy'), 
   propietario_seq.currval, 1);
 
@@ -180,10 +180,10 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Ivan', 'Fernandez', 'Cano', 'FIC880406HPL', 'FECA880406HDFNIN03', 'ivan.fernandez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 98765432, empty_blob(), empty_blob(), empty_blob(), to_date('01/01/2021','dd/mm/yyyy'), to_date('01/01/2024','dd/mm/yyyy'), 
   propietario_seq.currval, 2);
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, 4, 23456789, empty_blob(), empty_blob(), empty_blob(), to_date('02/02/2024','dd/mm/yyyy'), to_date('02/02/2027','dd/mm/yyyy'), 
   propietario_seq.currval, 2);
 
@@ -204,8 +204,8 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Brenda', 'Flores', 'Rivera', 'FBR900512MTF', 'FLRB900512MDFNNB04', 'brenda.flores@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
-  values(licencia_seq.nextval, null, 76543210, empty_blob(), empty_blob(), empty_blob(), to_date('31/04/2023','dd/mm/yyyy'), to_date('31/04/2026','dd/mm/yyyy'), 
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
+  values(licencia_seq.nextval, null, 76543210, empty_blob(), empty_blob(), empty_blob(), to_date('30/04/2023','dd/mm/yyyy'), to_date('30/04/2026','dd/mm/yyyy'), 
   propietario_seq.currval, 3);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
@@ -224,7 +224,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Jazmin', 'Jimenez', 'Aguirre', 'JAM950304MTF', 'JIAJ950304MDFNJM05', 'maria.jimenez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 65432109, empty_blob(), empty_blob(), empty_blob(), to_date('05/10/2021','dd/mm/yyyy'), to_date('05/10/2021','dd/mm/yyyy'), 
   propietario_seq.currval, 1);
 
@@ -245,7 +245,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales)
   values(propietario_seq.nextval, 'Juan', 'Perez', 'Lopez', 'JPL890123HTH', 'PEJL890123HMCRLN04', 'juan.perez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 54321098, empty_blob(), empty_blob(), empty_blob(), to_date('29/04/2022','dd/mm/yyyy'), to_date('29/04/2022','dd/mm/yyyy'), 
   propietario_seq.currval, 2);
 
@@ -275,10 +275,10 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Maria', 'Gonzalez', 'Ramirez', 'MGR850213MCH', 'GORM850213MDFMZN05', 'maria.gonzalez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 43210987, empty_blob(), empty_blob(), empty_blob(), to_date('07/09/2018','dd/mm/yyyy'), to_date('07/09/2021','dd/mm/yyyy'), 
   propietario_seq.currval, 1);
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, 8, 32109876, empty_blob(), empty_blob(), empty_blob(), to_date('19/10/2021','dd/mm/yyyy'), to_date('19/10/2024','dd/mm/yyyy'), 
   propietario_seq.currval, 1);
 
@@ -297,7 +297,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Carlos', 'Hernandez', 'Martinez', 'CHM801011HPL', 'HEMC801011HDFNRL06', 'carlos.hernandez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 21098765, empty_blob(), empty_blob(), empty_blob(), to_date('08/03/2020','dd/mm/yyyy'), to_date('08/03/2023','dd/mm/yyyy'), 
   propietario_seq.currval, 3);
 
@@ -336,7 +336,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Laura', 'Diaz', 'Sanchez', 'LDS950405MTF', 'DASL950405MDFNLR07', 'laura.diaz@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 90876543, empty_blob(), empty_blob(), empty_blob(), to_date('06/06/2021','dd/mm/yyyy'), sysdate, 
   propietario_seq.currval, 1);
 
@@ -357,7 +357,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Jose', 'Lopez', 'Hernandez', 'JLH780912HBC', 'LOHJ780912HDFMRL08', 'jose.lopez@gmail.com', 0);
 
-insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_ini, fecha_fin, propietario_id, tipo_licencia_id)
+insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 12345670, empty_blob(), empty_blob(), empty_blob(), to_date('31/12/2023','dd/mm/yyyy'), to_date('31/12/2024','dd/mm/yyyy'), 
   propietario_seq.currval, 1);
 
