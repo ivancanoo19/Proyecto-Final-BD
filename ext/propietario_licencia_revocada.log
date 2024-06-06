@@ -397,3 +397,44 @@ Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
     CORREO                          CHAR (255)
       Terminated by ","
       Trim whitespace from left and right
+
+
+ LOG file opened at 06/05/24 19:17:18
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/05/24 19:17:18
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right

@@ -40,7 +40,7 @@ create or replace view v_num_infracciones(
 ) as
   select d.propietario_id, d.nombre, d.ap_paterno, d.ap_materno, d.rfc,
     count(*) as num_infracciones
-  from propietario d
+  from s_dueño d
   left join infraccion i on d.propietario_id=i.propietario_id
   group by d.propietario_id, d.nombre, d.ap_paterno, d.ap_materno, d.rfc;
 

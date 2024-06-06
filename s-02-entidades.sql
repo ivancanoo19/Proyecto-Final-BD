@@ -253,7 +253,6 @@ create table particular(
 --
 --  tabla licencia
 --
-
 Prompt Creando tabla licencia
 create table licencia(
   licencia_id number(10,0) not null,
@@ -279,7 +278,6 @@ create table licencia(
 --
 --  tabla infraccion
 --
-
 Prompt Creando tabla infraccion
 create table infraccion(
   folio number(4,0) not null,
@@ -297,7 +295,6 @@ create table infraccion(
 --
 --  tabla contaminante
 --
-
 Prompt Creando tabla contaminante
 create table contaminante(
   contaminante_id number(10,0) not null,
@@ -311,7 +308,6 @@ create table contaminante(
 --
 --  tabla verificacion
 --
-
 Prompt Creando tabla verificacion
 create table verificacion(
   verificacion_id number(10,0) not null,
@@ -328,7 +324,6 @@ create table verificacion(
 --
 --  tabla vehiculo_contaminante
 --
-
 Prompt Creando tabla vehiculo_contaminante
 create table vehiculo_contaminante(
   vehiculo_contaminante_id number(10,0) not null,
@@ -346,7 +341,6 @@ create table vehiculo_contaminante(
 --
 --  tabla notificacion
 --
-
 Prompt Creando tabla notificacion
 create table notificacion(
   notificacion_id number(10,0) not null,
@@ -363,7 +357,6 @@ create table notificacion(
 --
 --  tabla vehiculo_verificacion
 --
-
 Prompt Creando tabla vehiculo_verificacion
 create table vehiculo_verificacion(
   vehiculo_verificacion_id number(10,0) not null,
