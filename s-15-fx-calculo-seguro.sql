@@ -22,7 +22,7 @@ begin
     v_seguro := v_seguro - 1000;
   end if;                              --si el vehiculo tiene frenos abs, se restan 1000
   if tipo_trans = 2 then
-    v_seguro := v_seguro - 1000;           --si el vehiculo tiene transmisión automática, se restan 1000
+    v_seguro := v_seguro - 1000;       --si el vehiculo tiene transmisión automática, se restan 1000
   end if;
   return v_seguro;
 end;
