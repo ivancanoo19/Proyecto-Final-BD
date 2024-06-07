@@ -508,3 +508,7 @@ insert into propietario (propietario_id, nombre, ap_paterno, ap_materno, rfc, cu
 --
 insert into propietario (propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Patricia', 'Hernandez', 'Gomez', 'PHG880401MTF', 'HEGP880401MDFNRT13', 'patricia.hernandez@gmail.com', 0);
+
+
+
+commit;
