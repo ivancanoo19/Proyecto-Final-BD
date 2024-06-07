@@ -242,7 +242,7 @@ create table particular(
   tipo_transmision_id,
   importe_seguro numeric(8,2) default 0,
   impuesto generated always as (num_bolsas_aire * 1000 + abs * 2000 + tipo_transmision_id * 1500),
-  fecha_pago_impuesto date default sysdate;
+  fecha_pago_impuesto date default sysdate,
   --Constraints
   constraint particular_pk primary key (vehiculo_id),
   constraint particular_vehiculo_id_fk foreign key(vehiculo_id)
