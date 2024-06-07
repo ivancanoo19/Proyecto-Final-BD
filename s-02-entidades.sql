@@ -198,9 +198,9 @@ create table transporte_pub(
   constraint tipo_licencia_id_chk check(
     (tipo_licencia_id = 1 and pasajeros_sentados = 4 and pasajeros_parados = 0)
     or
-    (tipo_licencia_id = 2 and pasajeros_sentados < 4 and pasajeros_sentados > 20 and pasajeros_parados = 0)
+    (tipo_licencia_id = 2 and pasajeros_sentados > 4 and pasajeros_sentados < 20 and pasajeros_parados = 0)
     or
-    (tipo_licencia_id = 3 and pasajeros_sentados <= 20 and pasajeros_parados <= 1)
+    (tipo_licencia_id = 3 and pasajeros_sentados >= 20 and pasajeros_parados >= 1)
   )
 );
 
@@ -264,7 +264,7 @@ create table licencia(
   fecha_fin date not null,
   licencia_anterior_id,
   propietario_id,
-  tipo_licencia_id,
+  tipo_licencia_id number(10,0) null,
   --CONSTRAINTS
   constraint licencia_pk primary key(licencia_id),
   constraint licencia_licencia_anterior_id_fk foreign key(licencia_anterior_id)
