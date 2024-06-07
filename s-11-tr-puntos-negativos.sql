@@ -26,6 +26,7 @@ create or replace trigger tr_puntos_negativos
         update propietario
         set puntos_neg_totales = v_puntos_totales + v_puntos_neg
         where propietario_id = v_propietario;
+        dbms_output.put_line('Se actualizaron los puntos negativos totales del propietrio con id: '||:new.propietario_id);
     end case;
   end;
   /
