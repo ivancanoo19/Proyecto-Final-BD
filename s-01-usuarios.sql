@@ -32,7 +32,7 @@ grant create session, create synonym to bf_proy_invitado;
 
 create role rol_proy_admin not identified;
 grant create session, create table, create sequence, create procedure, 
-  create synonym, create public synonym, create view to bf_proy_admin;
+  create synonym, create public synonym, create view, create trigger to bf_proy_admin;
 
 Prompt Listo!
 disconnect
