@@ -264,7 +264,7 @@ create table licencia(
   fecha_fin date not null,
   licencia_anterior_id,
   propietario_id,
-  tipo_licencia_id,
+  tipo_licencia_id number(10,0) null,
   --CONSTRAINTS
   constraint licencia_pk primary key(licencia_id),
   constraint licencia_licencia_anterior_id_fk foreign key(licencia_anterior_id)
