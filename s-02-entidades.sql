@@ -106,9 +106,9 @@ create table vehiculo(
 Prompt Creando tabla hist_propietarios
 create table hist_propietarios(
   hist_propietarios_id number(10,0) not null,
-  fecha_ini date not null,
+  fecha_inicio date not null,
   fecha_fin date null,
-  rfc_propietario varchar(13) not null,
+  --rfc_propietario varchar(13) not null,
   vehiculo_id,
   propietario_id,
   --Constraints--
