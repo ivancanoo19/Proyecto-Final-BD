@@ -198,9 +198,9 @@ create table transporte_pub(
   constraint tipo_licencia_id_chk check(
     (tipo_licencia_id = 1 and pasajeros_sentados = 4 and pasajeros_parados = 0)
     or
-    (tipo_licencia_id = 2 and pasajeros_sentados < 4 and pasajeros_sentados > 20 and pasajeros_parados = 0)
+    (tipo_licencia_id = 2 and pasajeros_sentados > 4 and pasajeros_sentados < 20 and pasajeros_parados = 0)
     or
-    (tipo_licencia_id = 3 and pasajeros_sentados <= 20 and pasajeros_parados <= 1)
+    (tipo_licencia_id = 3 and pasajeros_sentados >= 20 and pasajeros_parados >= 1)
   )
 );
 

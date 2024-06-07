@@ -438,3 +438,208 @@ Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
     CORREO                          CHAR (255)
       Terminated by ","
       Trim whitespace from left and right
+
+
+ LOG file opened at 06/06/24 20:41:07
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/06/24 20:41:07
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+
+
+ LOG file opened at 06/06/24 20:42:21
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/06/24 20:42:21
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+
+
+ LOG file opened at 06/06/24 20:43:54
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/06/24 20:43:54
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+
+
+ LOG file opened at 06/06/24 20:45:03
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/06/24 20:45:03
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+
+
+ LOG file opened at 06/06/24 20:45:32
+
+Total Number of Files=1
+
+Data File: propietario_licencia_revocada.csv
+
+Log File: propietario_licencia_revocada.log
+
+
+
+ LOG file opened at 06/06/24 20:45:32
+
+Bad File: propietario_licencia_revocada_bad.log
+
+Field Definitions for table PROPIETARIO_LICENCIA_REVOCADA
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    NOMBRE                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_PATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    AP_MATERNO                      CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    RFC                             CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CURP                            CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right
+    CORREO                          CHAR (255)
+      Terminated by ","
+      Trim whitespace from left and right

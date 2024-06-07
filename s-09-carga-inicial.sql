@@ -86,18 +86,18 @@ insert into tipo_licencia(tipo_licencia_id, descripcion, nombre)
   values(3, 'Autobuses y camionetas que tienen capacidad para transportar a 20 o más pasajeros', 'C');
 
 --
---  tabla contaminantes
+--  tabla contaminante
 --
-insert into contaminantes(contaminante_id, clave, rango, nombre)
+insert into contaminante(contaminante_id, clave, rango, nombre)
   values(contaminante_seq.nextval, 'HC', null, 'Hidrocarburos');
 
-insert into contaminantes(contaminante_id, clave, rango, nombre)
+insert into contaminante(contaminante_id, clave, rango, nombre)
   values(contaminante_seq.nextval, 'CO', null, 'Monóxido de Carbono');
 
-insert into contaminantes(contaminante_id, clave, rango, nombre)
+insert into contaminante(contaminante_id, clave, rango, nombre)
   values(contaminante_seq.nextval, 'NOx', 1, 'Óxido de Nitrógeno');
 
-insert into contaminantes(contaminante_id, clave, rango, nombre)
+insert into contaminante(contaminante_id, clave, rango, nombre)
   values(contaminante_seq.nextval, 'CO2', null, 'Dióxido de Carbono');
 
 --
@@ -151,7 +151,7 @@ values (placa_seq.nextval, 'KKE187', sysdate, 1, null, 10);
 --
 --  (1)
 --
-
+Prompt Set 1
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Hector', 'Bueno', 'Hernandez', 'BDH870123HPL', 'BUHH870123HDFNRD01', 'hector.bueno@gmail.com', 0);
@@ -174,6 +174,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (2)
 --
+Prompt Set 2
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales)
   values(propietario_seq.nextval, 'Lesliee', 'Cruz', 'Buenavista', 'CSL920215MTF', 'CRBL920215MDFNLL02', 'lesliee.cruz@gmail.com', 0);
@@ -201,7 +202,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (3)
 --
-
+Prompt Set 3
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Ivan', 'Fernandez', 'Cano', 'FIC880406HPL', 'FECA880406HDFNIN03', 'ivan.fernandez@gmail.com', 0);
@@ -235,6 +236,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (4)
 --
+Prompt Set 4
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Brenda', 'Flores', 'Rivera', 'FBR900512MTF', 'FLRB900512MDFNNB04', 'brenda.flores@gmail.com', 0);
@@ -258,6 +260,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (5)
 --
+Prompt Set 5
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Jazmin', 'Jimenez', 'Aguirre', 'JAM950304MTF', 'JIAJ950304MDFNJM05', 'maria.jimenez@gmail.com', 0);
@@ -285,6 +288,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (6)
 --
+Prompt Set 6
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales)
   values(propietario_seq.nextval, 'Juan', 'Perez', 'Lopez', 'JPL890123HTH', 'PEJL890123HMCRLN04', 'juan.perez@gmail.com', 0);
@@ -328,6 +332,8 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (7)
 --
+Prompt Set 7
+
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Maria', 'Gonzalez', 'Ramirez', 'MGR850213MCH', 'GORM850213MDFMZN05', 'maria.gonzalez@gmail.com', 0);
 
@@ -353,6 +359,8 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (8)
 --
+Prompt Set 8
+
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Carlos', 'Hernandez', 'Martinez', 'CHM801011HPL', 'HEMC801011HDFNRL06', 'carlos.hernandez@gmail.com', 0);
 
@@ -404,6 +412,8 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (9)
 --
+Prompt Set 9
+
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Laura', 'Diaz', 'Sanchez', 'LDS950405MTF', 'DASL950405MDFNLR07', 'laura.diaz@gmail.com', 0);
 
@@ -427,6 +437,7 @@ insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_i
 --
 --  (10)
 --
+Prompt Set 10
 
 insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, curp, correo, puntos_neg_totales) 
   values(propietario_seq.nextval, 'Jose', 'Lopez', 'Hernandez', 'JLH780912HBC', 'LOHJ780912HDFMRL08', 'jose.lopez@gmail.com', 0);
