@@ -157,7 +157,7 @@ insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, cur
   values(propietario_seq.nextval, 'Hector', 'Bueno', 'Hernandez', 'BDH870123HPL', 'BUHH870123HDFNRD01', 'hector.bueno@gmail.com', 0);
 
 insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
-  values(licencia_seq.nextval, null, 12345678, empty_blob(), empty_blob(), empty_blob(), sysdate, to_date('06/06/2027','dd/mm/yyyy'), propietario_seq.currval, 1);
+  values(licencia_seq.nextval, null, 12345678, empty_blob(), empty_blob(), empty_blob(), sysdate, to_date('06/06/2027','dd/mm/yyyy'), propietario_seq.currval, null);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
@@ -180,7 +180,7 @@ insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, cur
 
 insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 87654321, empty_blob(), empty_blob(), empty_blob(), to_date('27/03/2022','dd/mm/yyyy'), to_date('27/03/2025','dd/mm/yyyy'), 
-  propietario_seq.currval, 1);
+  propietario_seq.currval, null);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
@@ -219,7 +219,7 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   to_date('10-03-2024', 'dd-mm-yyyy'), null, 'DISP003', to_date('10-03-2024', 'dd-mm-yyyy'), propietario_seq.currval, 1, 5);
 
 insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
-  values(vehiculo_seq.currval, 18, 0, 2) 
+  values(vehiculo_seq.currval, 18, 0, 2);
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 0.80, vehiculo_seq.currval, 2);
@@ -248,6 +248,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   values(vehiculo_seq.nextval, to_date('25-11-2023', 'dd-mm-yyyy'), 2023, '3HGCM82633A004355', 0, 0, 1, 
   to_date('25-11-2023', 'dd-mm-yyyy'), null, 'DISP004', to_date('25-11-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 8);
 
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 25, 20, 3);
+
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'JKL012', to_date('25-11-2023', 'dd-mm-yyyy'), 1, vehiculo_seq.currval, 4);
 
@@ -261,12 +264,15 @@ insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, cur
 
 insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 65432109, empty_blob(), empty_blob(), empty_blob(), to_date('05/10/2021','dd/mm/yyyy'), to_date('05/10/2021','dd/mm/yyyy'), 
-  propietario_seq.currval, 1);
+  propietario_seq.currval, null);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, to_date('06-06-2024', 'dd-mm-yyyy'), 2024, '4HGCM82633A004356', 0, 0, 1, 
   to_date('06-06-2024', 'dd-mm-yyyy'), null, 'DISP005', to_date('06-06-2024', 'dd-mm-yyyy'), propietario_seq.currval, 1, 10);
+
+insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id)
+  values(vehiculo_seq.currval, 2, 1, 2);
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 0.40, vehiculo_seq.currval, 3);
@@ -293,6 +299,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   values(vehiculo_seq.nextval, sysdate, 2023, '5TGCM82633A004357', 0, 1, 0, 
   sysdate, null, 'DISP006', sysdate, propietario_seq.currval, 4, 7);
 
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 10, 0, 2);
+
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'MKH842', sysdate, 1, vehiculo_seq.currval, 4);
 
@@ -304,6 +313,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, to_date('20-08-2023', 'dd-mm-yyyy'), 2023, '6UGCM82633A004358', 1, 0, 0, 
   to_date('20-08-2023', 'dd-mm-yyyy'), to_date('20-10-2023', 'dd-mm-yyyy'), 'DISP007', to_date('20-08-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 10);
+
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 10, 0, 2);
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 0.40, vehiculo_seq.currval, 2);
@@ -331,6 +343,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   values(vehiculo_seq.nextval, to_date('12-12-2023', 'dd-mm-yyyy'), 2023, '7VGCM82633A004359', 0, 0, 1, 
   to_date('12-12-2023', 'dd-mm-yyyy'), null, 'DISP008', to_date('12-12-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 5);
 
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 4, 0, 1);
+
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'PQR678', to_date('12-12-2023', 'dd-mm-yyyy'), 1, vehiculo_seq.currval, 4);
 
@@ -352,6 +367,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   to_date('15-03-2023', 'dd-mm-yyyy'), to_date('10-05-2023', 'dd-mm-yyyy'), 'DISP011', to_date('15-03-2023', 'dd-mm-yyyy'), 
   propietario_seq.currval, 4, 7);
 
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 30, 25, 3);
+
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'STU789', to_date('15-03-2023', 'dd-mm-yyyy'), 0, vehiculo_seq.currval, 3);
 
@@ -362,6 +380,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   to_date('20-05-2023', 'dd-mm-yyyy'), to_date('17-07-2023', 'dd-mm-yyyy'), 'DISP014', to_date('20-05-2023', 'dd-mm-yyyy'), 
   propietario_seq.currval, 1, 3);
 
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 22, 10, 3);
+
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'UVW890', to_date('20-05-2023', 'dd-mm-yyyy'), 0, vehiculo_seq.currval, 4);
 
@@ -370,6 +391,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, to_date('10-07-2023', 'dd-mm-yyyy'), 2023, '3HGCM82633A004362', 0, 0, 1, 
   to_date('10-07-2023', 'dd-mm-yyyy'), null, 'DISP017', to_date('10-07-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 8);
+
+insert into transporte_pub(vehiculo_id, pasajeros_sentados, pasajeros_parados, tipo_licencia_id)
+  values(vehiculo_seq.currval, 28, 20, 3);
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 0.60, vehiculo_seq.currval, 3);
@@ -385,13 +409,16 @@ insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, cur
 
 insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 90876543, empty_blob(), empty_blob(), empty_blob(), to_date('06/06/2021','dd/mm/yyyy'), sysdate, 
-  propietario_seq.currval, 1);
+  propietario_seq.currval, null);
 
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values (vehiculo_seq.nextval, to_date('25-09-2023', 'dd-mm-yyyy'), 2023, '1HGCM82633A004363', 0, 0, 1, 
   to_date('25-09-2023', 'dd-mm-yyyy'), to_date('02-03-2024', 'dd-mm-yyyy'), 'DISP020', to_date('25-09-2023', 'dd-mm-yyyy'), 
   propietario_seq.currval, 4, 1);
+
+insert into carga(vehiculo_id, capacidad_ton, capacidad_m3, num_remolques)
+  values(vehiculo_seq.currval, 20, 80, 2);
 
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'XYZ012', to_date('25-09-2023', 'dd-mm-yyyy'), 0, vehiculo_seq.currval, 1);
@@ -406,13 +433,16 @@ insert into propietario(propietario_id, nombre, ap_paterno, ap_materno, rfc, cur
 
 insert into licencia(licencia_id, licencia_anterior_id, num_licencia, foto, firma, huella_izq, fecha_inicio, fecha_fin, propietario_id, tipo_licencia_id)
   values(licencia_seq.nextval, null, 12345670, empty_blob(), empty_blob(), empty_blob(), to_date('31/12/2023','dd/mm/yyyy'), to_date('31/12/2024','dd/mm/yyyy'), 
-  propietario_seq.currval, 1);
+  propietario_seq.currval, null);
 
 -- 1er vehiculo
 insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_pub, es_carga, es_particular, fecha_inicio, fecha_fin, 
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, to_date('15-07-2023', 'dd-mm-yyyy'), 2023, '2HGCM82633A004369', 0, 1, 1, 
   to_date('15-07-2023', 'dd-mm-yyyy'), sysdate, 'DISP025', to_date('15-07-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 8);
+
+insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id)
+  values(vehiculo_seq.currval, 6, 1, 2);
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 1.03, vehiculo_seq.currval, 4);
@@ -425,6 +455,9 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   num_serie_dispositivo, fecha_registro_dispositivo, propietario_id, status_vehiculo_id, modelo_id)
   values(vehiculo_seq.nextval, sysdate, 2023, '3HGCM82633A004375', 1, 0, 0, 
   sysdate, null, 'DISP030', sysdate, propietario_seq.currval, 1, 2);
+
+insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id)
+  values(vehiculo_seq.currval, 4, 0, 1);
 
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'KIL777', sysdate, 1, vehiculo_seq.currval, 10);
