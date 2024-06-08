@@ -47,8 +47,9 @@ begin
       v_num_serie := v_num_serie||'FO';
     end if;
   end if;
-  v_num_serie := v_num_serie||to_char(substr(año,-1,2));
-  v_num_serie := v_num_serie||to_char(dbms_random.value(1000,9999));
+  v_num_serie := v_num_serie||substr(año,3,2);
+  v_num_serie := v_num_serie||floor(dbms_random.value(1000,9999));
+  return v_num_serie;
 end;
 /
 show errors
