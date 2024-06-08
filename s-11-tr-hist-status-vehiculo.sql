@@ -2,10 +2,6 @@
 --@Fecha creación:  06/06/2024
 --@Descripción:     Proyecto final - Trigger para automatizar registros en historicos
 
-
-/*
-    EN EL TRIGGER DE BEFORE, CHECAR QUE CUANDO SE ACTUALICE STATUS_ID TAMBIEN SE ACTUALICE FECHA
-*/
 connect BF_PROY_ADMIN/admin
 set serveroutput on
 create or replace trigger tr_hist_status_vehiculo
