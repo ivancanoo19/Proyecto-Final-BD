@@ -26,4 +26,4 @@
 @s-11-tr-num-licencias.sql
 @s-11-tr-puntos-negativos.sql
 @s-11-tr-verificacion.sql
-s-13-medidas-contaminantes.sql
+@s-13-medidas-contaminantes.sql

@@ -10,7 +10,7 @@ create or replace procedure p_adeudo_impuesto(
   cursor cur_particular is
     select vehiculo_id
       from particular
-    where fecha_pago_impuesto;
+    where (fecha_pago_impuesto + 365) < p_fecha_actual;
 begin
   for r in cur_particular loop
     update vehiculo
