@@ -4,17 +4,17 @@
 
 connect BF_PROY_ADMIN/admin
 set serveroutput on
-create or replace function fx_calculo_impuesto(
+create or replace function fx_calculo_seguro(
   bolsas_aire number,
   frenos_abs number,
   tipo_trans number
 ) return number is
-  v_seguro number(5,2);
-  v_aux number(5,2);
+  v_seguro number(10,0);
+  v_aux number(10,0);
 begin
   v_seguro := 6000;                    --valor inicial del seguro: 6000
   v_aux := bolsas_aire;
-  while bolsas_aire > 0 loop
+  while v_aux > 0 loop
     v_seguro := v_seguro - 250;
     v_aux := v_aux -1;
   end loop;                            --se restan 250 por cada bolsa de aire
