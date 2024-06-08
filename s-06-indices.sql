@@ -46,7 +46,7 @@ create index licencia_fecha_fin_ifx on licencia(to_char(fecha_fin,'yyyy'));
 
 create index propietario_rfc_ifx on propietario(substr(rfc, -1, 4));
 
-create index hist_propietarios_fecha_ini_ifx on hist_propietarios(to_char(fecha_ini, 'yyyy'));
+create index hist_propietarios_fecha_ini_ifx on hist_propietarios(to_char(fecha_inicio, 'yyyy'));
 
 create index verificacion_fecha_ifx on verificacion(to_char(fecha, 'yyyy'));
 
