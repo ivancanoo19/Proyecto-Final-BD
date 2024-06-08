@@ -5,7 +5,7 @@
 connect BF_PROY_ADMIN/admin
 set serveroutput on
 create or replace procedure p_licencia_expirada(
-    p_fecha_fin in date
+    p_fecha_fin in date 
 )is 
   cursor cur_licencia is
     select propietario_id
@@ -14,7 +14,8 @@ create or replace procedure p_licencia_expirada(
 begin
   for r in cur_licencia loop
     update vehiculo
-    set status_vehiculo_id = 2
+    set status_vehiculo_id = 2,
+      fecha_status = sysdate
     where propietario_id = r.propietario_id;
   end loop;
   dbms_output.put_line('El estatus de los vehículos con licencia expirada fue actualizado.');
