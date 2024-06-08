@@ -33,9 +33,9 @@ create unique index vehiculo_num_serie_dispositivo on vehiculo(num_serie_disposi
 --
 --  Indices unique compuestos
 --
-create unique index vehiculo_contaminante_iux on vehiculo_contaminante(vehiculo_id, contaminante_id);
+create index vehiculo_contaminante_iux on vehiculo_contaminante(vehiculo_id, contaminante_id);
 
-create unique index vehiculo_verificacion_iux on vehiculo_verificacion(contaminante_id, verificacion_id);
+create index vehiculo_verificacion_iux on vehiculo_verificacion(contaminante_id, verificacion_id);
 
 create unique index hist_propietarios_iux on hist_propietarios(vehiculo_id, propietario_id);
 
