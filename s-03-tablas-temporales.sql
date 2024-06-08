@@ -62,9 +62,6 @@ Prompt Creando tabla temporal privada
 create private temporary table ora$ptt_reporte_vehiculo_propietario(
   vehiculo_id number(10,0),
   num_serie varchar2(18),
-  es_transporte_pub number(1,0),
-  es_carga number(1,0),
-  es_particular number(1,0),
   rfc varchar2(13),
   curp varchar2(18),
   correo varchar(200)
