@@ -1,7 +1,7 @@
 connect BF_PROY_ADMIN/admin
 set serveroutput on
 
-create or replace trigger tr_medida
+create or replace trigger tr_medidas_contaminantes
 for insert on vehiculo_contaminante
 compound trigger
   -- Guardando los valores que se van a pasar cuando se llame al procedimiento
@@ -30,6 +30,6 @@ compound trigger
       p_insertar_notificacion(notif_list(i).vehiculo_contaminante_id, notif_list(i).vehiculo_id, notif_list(i).fecha_reporte);
     end loop;
   end after statement;
-end tr_medida;
+end tr_medidas_contaminantes;
 /
 show errors

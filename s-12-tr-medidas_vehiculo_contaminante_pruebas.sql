@@ -99,7 +99,7 @@ Prompt
 Prompt
 Prompt ===========================================================================================
 Prompt Prueba 2 - Positiva
-prompt Insertando medidas que rebasan el limite de medidas de contaminante (solo una notificacion)
+prompt Insertando medidas que rebasan el limite de medidas de contaminante
 Prompt ===========================================================================================
 
 Prompt Esta primer medida no rebasa el limite, por lo que no se inserta
@@ -194,7 +194,7 @@ Prompt
 Prompt
 Prompt ===========================================================================================
 Prompt Prueba 3 - Positiva
-prompt Insertando medidas que rebasan el limite de medidas de contaminante (solo una notificacion)
+prompt Insertando medidas que rebasan el limite de medidas de contaminante
 Prompt ===========================================================================================
 
 
@@ -220,35 +220,6 @@ Prompt status 2
 select status_vehiculo_id from vehiculo where vehiculo_id = 3;
 
 Prompt Prueba 3 concluida
-
-Prompt
-Prompt
-Prompt
-Prompt ===========================================================================================
-Prompt Prueba 4 - Positiva
-prompt Insertando medidas que rebasan el limite de medidas de contaminante (solo una notificacion)
-Prompt ===========================================================================================
-
-update vehiculo
-set status_vehiculo_id = 1
-where vehiculo_id = 3;
-
-insert into vehiculo_contaminante(vehiculo_contaminante_id, vehiculo_id, contaminante_id, medida, fecha_reporte)
-  values(vehiculo_contaminante_seq.nextval, 3, 2, 1.2, sysdate+40);
-
-insert into vehiculo_contaminante(vehiculo_contaminante_id, vehiculo_id, contaminante_id, medida, fecha_reporte)
-  values(vehiculo_contaminante_seq.nextval, 3, 2, 1.2, sysdate+50);
-
-Prompt status 1
-select status_vehiculo_id from vehiculo where vehiculo_id = 3;
-
-Prompt Prueba 4 concluida
-
-Prompt Mostrando los datos insertados en notificacion
-select * from notificacion;
-
-Promot Mostrando datos de todos los vehiculos_contaminantes
-select * from vehiculo_contaminante;
 
 Prompt
 Prompt
