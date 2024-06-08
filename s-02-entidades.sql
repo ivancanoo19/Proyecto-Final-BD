@@ -329,6 +329,7 @@ Prompt Creando tabla vehiculo_contaminante
 create table vehiculo_contaminante(
   vehiculo_contaminante_id number(10,0) not null,
   medida number(5,2) not null,
+  fecha_reporte date default sysdate,
   vehiculo_id,
   contaminante_id,
   --CONSTRAINTS
