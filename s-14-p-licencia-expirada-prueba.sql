@@ -12,11 +12,10 @@ Prompt Considerar que se utilizarán dos autos ya registrados para verificar su 
 Prompt ===============================================================================
 Prompt Datos iniciales
 
-set linesize window
-
-select * from vehiculo
-where vehiculo_id = 2
- or vehiculo_id  = 9;
+select v.vehiculo_id, v.status_vehiculo_id, s.nombre, v.fecha_status
+  from vehiculo v, status_vehiculo s
+where v.status_vehiculo_id = s.status_vehiculo_id
+  and (v.vehiculo_id = 2 or v.vehiculo_id = 9);
 
 Prompt
 Prompt
@@ -43,9 +42,10 @@ end;
 /
 show errors
 
-select vehiculo_id, fecha_status, status_vehiculo_id
-  from vehiculo
-where vehiculo_id = 2;
+select v.vehiculo_id, v.status_vehiculo_id, s.nombre, v.fecha_status
+  from vehiculo v, status_vehiculo s
+where v.status_vehiculo_id = s.status_vehiculo_id
+  and v.vehiculo_id = 2;
 
 Prompt Prueba 1 concluida
 Prompt Haciendo rollback para limpiar la BD
@@ -76,9 +76,10 @@ end;
 /
 show errors
 
-select vehiculo_id, fecha_status, status_vehiculo_id
-  from vehiculo
-where vehiculo_id = 9;
+select v.vehiculo_id, v.status_vehiculo_id, s.nombre, v.fecha_status
+  from vehiculo v, status_vehiculo s
+where v.status_vehiculo_id = s.status_vehiculo_id
+  and v.vehiculo_id = 9;
 
 Prompt Prueba 2 concluida
 Prompt Haciendo rollback para limpiar la BD

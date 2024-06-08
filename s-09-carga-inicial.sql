@@ -164,8 +164,8 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   values(vehiculo_seq.nextval, sysdate, 2023, '1HGCM82633A004352', 0, 0, 1, to_date('15-01-2023', 'dd-mm-yyyy'), null, 'DISP001', 
   to_date('15-01-2023', 'dd-mm-yyyy'), propietario_seq.currval, 1, 3);
 
-insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id)
-  values(vehiculo_seq.currval, 4, 1, 1);
+insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id, fecha_pago_impuesto)
+  values(vehiculo_seq.currval, 4, 1, 1, to_date('07/09/2023','dd/mm/yyyy'));
 
 insert into placa(placa_id, num_placa, fecha_asignacion, esta_activa, vehiculo_id, entidad_pais_id)
   values(placa_seq.nextval, 'ABC123', to_date('15-01-2023', 'dd-mm-yyyy'), 1, vehiculo_seq.currval, 1);
@@ -274,8 +274,8 @@ insert into vehiculo(vehiculo_id, fecha_status, año, num_serie, es_transporte_p
   values(vehiculo_seq.nextval, to_date('06-06-2024', 'dd-mm-yyyy'), 2024, '4HGCM82633A004356', 0, 0, 1, 
   to_date('06-06-2024', 'dd-mm-yyyy'), null, 'DISP005', to_date('06-06-2024', 'dd-mm-yyyy'), propietario_seq.currval, 1, 10);
 
-insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id)
-  values(vehiculo_seq.currval, 2, 1, 2);
+insert into particular(vehiculo_id, num_bolsas_aire, abs, tipo_transmision_id, fecha_pago_impuesto)
+  values(vehiculo_seq.currval, 2, 1, 2, to_date('23/10/2022', 'dd/mm/yyyy'));
 
 insert into vehiculo_contaminante(vehiculo_contaminante_id, medida, vehiculo_id, contaminante_id)
   values(vehiculo_contaminante_seq.nextval, 0.40, vehiculo_seq.currval, 3);
