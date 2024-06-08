@@ -64,6 +64,3 @@ col correo format a30
 Prompt Mostrando datos
 select * from propietario_licencia_revocada;
 
-Prompt Haciendo limpieza (script idempotente)
-drop table propietario_licencia_revocada;
-
