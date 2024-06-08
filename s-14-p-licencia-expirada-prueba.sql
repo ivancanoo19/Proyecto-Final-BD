@@ -9,6 +9,7 @@ Prompt
 Prompt ===============================================================================
 Prompt Prueba iniciada
 Prompt Considerar que se utilizarán dos autos ya registrados para verificar su estatus
+Prompt y que el periodo de vigencia de una licencia es de tres años
 Prompt ===============================================================================
 Prompt Datos iniciales
 
